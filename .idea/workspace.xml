@@ -22,10 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0f98c5b-24ed-4de8-8e84-ccd3f58be991" name="Default" comment="Spark Definitive guide Chapter 6 snippets. Working with different datatypes">
-      <change afterPath="$PROJECT_DIR$/src/main/scala/chapter7_Aggregations/aggregations.scala" afterDir="false" />
+    <list default="true" id="c0f98c5b-24ed-4de8-8e84-ccd3f58be991" name="Default" comment="Spark Definitive guide Chapter 6 snippets. Working with different datatypes completed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/chapter6/workingWithDifferentDatatypes.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/chapter6_WorkingWithDifferentTypes/workingWithDifferentDatatypes.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/chapter7_Aggregations/aggregations.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/chapter7_Aggregations/aggregations.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -270,7 +269,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629392641175</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Spark Definitive guide Chapter 6 snippets. Working with different datatypes completed">
+      <created>1629561346942</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1629561346942</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,7 +297,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Spark Definitive guide Chapter 6 snippets. Working with different datatypes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Spark Definitive guide Chapter 6 snippets. Working with different datatypes" />
+    <MESSAGE value="Spark Definitive guide Chapter 6 snippets. Working with different datatypes completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Spark Definitive guide Chapter 6 snippets. Working with different datatypes completed" />
   </component>
   <component name="WindowStateProjectService">
     <state x="413" y="123" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1629561022562">
@@ -306,22 +313,22 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="441" y="170" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.738@0.0.1366.738" timestamp="1626628325996" />
-    <state width="1323" height="354" key="GridCell.Tab.0.bottom" timestamp="1629561038208">
+    <state width="1323" height="354" key="GridCell.Tab.0.bottom" timestamp="1629565074498">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="354" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1629561038208" />
-    <state width="1323" height="354" key="GridCell.Tab.0.center" timestamp="1629561038208">
+    <state width="1323" height="354" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1629565074498" />
+    <state width="1323" height="354" key="GridCell.Tab.0.center" timestamp="1629565074497">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="354" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1629561038208" />
-    <state width="1323" height="354" key="GridCell.Tab.0.left" timestamp="1629561038208">
+    <state width="1323" height="354" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1629565074497" />
+    <state width="1323" height="354" key="GridCell.Tab.0.left" timestamp="1629565074497">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="354" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1629561038208" />
-    <state width="1323" height="354" key="GridCell.Tab.0.right" timestamp="1629561038208">
+    <state width="1323" height="354" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1629565074497" />
+    <state width="1323" height="354" key="GridCell.Tab.0.right" timestamp="1629565074497">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="354" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1629561038208" />
+    <state width="1323" height="354" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1629565074497" />
     <state width="1323" height="227" key="GridCell.Tab.1.bottom" timestamp="1626440982035">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -342,14 +349,14 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="163" y="0" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1629391823177" />
-    <state x="275" y="88" key="Vcs.Push.Dialog.v2" timestamp="1629392821651">
+    <state x="275" y="88" key="Vcs.Push.Dialog.v2" timestamp="1629561369354">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="275" y="88" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1629392821651" />
-    <state x="476" y="102" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1629392661095">
+    <state x="275" y="88" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1629561369354" />
+    <state x="476" y="102" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1629561395265">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="476" y="102" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1366.738@0.0.1366.738" timestamp="1629392661095" />
+    <state x="476" y="102" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1366.738@0.0.1366.738" timestamp="1629561395265" />
     <state x="339" y="165" key="run.anything.popup" timestamp="1629463333980">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

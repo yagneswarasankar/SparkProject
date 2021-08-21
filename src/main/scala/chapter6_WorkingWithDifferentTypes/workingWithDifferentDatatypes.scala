@@ -1,8 +1,8 @@
-package chapter6
+package chapter6_WorkingWithDifferentTypes
 
 
 import org.apache.log4j.{Level, Logger}
-import org.apache.spark.sql.functions.{col, current_date, current_timestamp, date_add, date_sub, datediff, expr, floor, initcap, lit, lower, lpad, ltrim, monotonically_increasing_id, months_between, regexp_extract, regexp_replace, round, rpad, rtrim, to_date, translate, trim, upper}
+import org.apache.spark.sql.functions._
 import org.apache.spark.sql.types.{IntegerType, StringType, StructField, StructType}
 import org.apache.spark.sql.{Row, SparkSession}
 
@@ -138,14 +138,104 @@ object workingWithDifferentDatatypes {
       StructField("id", IntegerType, nullable = true),
       StructField("name", StringType, nullable = true)))
 
-    val data = Seq(Row(null, "Girija"),
+    val dt= Seq(Row(null, "Girija"),
       Row(null, null))
-    val rdd = spark.sparkContext.parallelize(data)
-    val df = spark.createDataFrame(rdd, schema)
-    df.show()
-    df.na.drop().show()
-    df.na.fill("Girija": String).show()
+    val rdd = spark.sparkContext.parallelize(dt)
+    val df1 = spark.createDataFrame(rdd, schema)
+    df1.show()
+    df1.na.drop().show()
+    df1.na.fill("Girija": String).show()
     val fillColValues = Map("id" -> 4, "name" -> "Thisis a null value")
-    df.na.fill(fillColValues).show()
+    df1.na.fill(fillColValues).show()
+
+    /************************************************************************************
+     *                                Complex Datatypes
+     ************************************************************************************/
+
+    val complexDf = rtlData.selectExpr("(StockCode,Description) as complex","*")
+
+    val complexDf1 = rtlData.select(struct("StockCode","Description").as("complex"))
+
+    complexDf
+      .selectExpr("complex.StockCode")
+      .show(5,truncate = false)
+
+    complexDf1.select("complex.*")
+      .show(5,truncate = false)
+
+    /*****************************************************************************
+     *                                      Arrays
+     *****************************************************************************/
+    rtlData.select(split(col("Description")," ").as("array_col"))
+      .selectExpr("array_col[0]")
+      .show(5,truncate = false)
+
+    rtlData.selectExpr("split(Description,\" \") as array_col")
+      .selectExpr("array_col[0]")
+      .show(4)
+
+    rtlData.select(col("Description").contains("WHITE"))
+      .show(5,truncate = false)
+
+    rtlData.select(expr("*"),array_contains(split(col("Description")," "),"WHITE"))
+      .show(5,truncate = false)
+
+
+    rtlData.withColumn("splitted",split(col("Description")," "))
+      .withColumn("exploded",explode(col("splitted")))
+        .select("Description","InvoiceNo","exploded")
+      .show(10,truncate = false)
+
+
+    /********************************************************************************
+     *                                         Maps
+     ********************************************************************************/
+
+    val complexMapDF = rtlData.select(map(col("Description"),col("InvoiceNo")).as("complexmap"))
+
+      complexMapDF.selectExpr("*","complexMap['WHITE HANGING HEART T-LIGHT HOLDER']")
+      .show(5,truncate = false)
+
+    complexMapDF.select(expr("*"),explode(col("complexmap"))).show(5,truncate = false)
+
+
+    /***************************************************************************
+     *                                     UDF
+     ****************************************************************************/
+
+    val numDf = spark.range(10).toDF("num")
+
+    def power3(num: Double): Double  = num * num * num
+
+    val udfRegistered = udf(power3(_:Double):Double)
+
+    numDf.select(udfRegistered(col("num"))).show(5,truncate = false)
+
+    ///to register it accross the spark.sql
+
+    spark.udf.register("power3",power3(_:Double):Double)
+
+    numDf.selectExpr("power3(num)").show(20,truncate = false)
+
+
+    def strUdf(str: String) = str.head.toUpper + str.tail
+    val data = Seq(Row("Hi Girija"),Row("how are you"))
+    val paralizedData  = spark.sparkContext.parallelize(data)
+
+    val sc = StructType(Array(StructField("name",StringType,nullable = false)))
+    val df = spark.createDataFrame(paralizedData,sc)
+
+    val regStrUdf  = udf(strUdf(_:String): String)
+
+    spark.udf.register("strrgr",strUdf(_:String): String)
+    df.select(regStrUdf(col("name"))).show()
+
+    df.selectExpr("strrgr(name)").show(4)
+
+
+
+
+
+
   }
 }

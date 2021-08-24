@@ -22,8 +22,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0f98c5b-24ed-4de8-8e84-ccd3f58be991" name="Default" comment="Spark Definitive guide Chapter 6 snippets. Working with different datatypes completed">
+    <list default="true" id="c0f98c5b-24ed-4de8-8e84-ccd3f58be991" name="Default" comment="Chapter 7 , Dataframe level aggregations">
+      <change afterPath="$PROJECT_DIR$/src/main/scala/chapter8_Joins/Joins.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/chapter7_Aggregations/aggregations.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/chapter7_Aggregations/aggregations.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,8 +47,8 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$USER_HOME$" value="develop" />
         <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$USER_HOME$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -89,7 +91,7 @@
       <recent name="C:\Learning\Scala\CricketData\src\main\resources\CricketData" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.aggregations">
+  <component name="RunManager" selected="Application.Joins">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -114,6 +116,20 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="SparkProject.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Joins" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="chapter8_Joins.Joins" />
+      <module name="SampleSparkProject" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="chapter8_Joins.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -223,11 +239,13 @@
       <item itemvalue="Application.FlightData" />
       <item itemvalue="Application.empDataProcess" />
       <item itemvalue="Application.workingWithDifferentDatatypes" />
-      <item itemvalue="Maven.Run" />
       <item itemvalue="Application.aggregations" />
+      <item itemvalue="Maven.Run" />
+      <item itemvalue="Application.Joins" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Joins" />
         <item itemvalue="Application.aggregations" />
         <item itemvalue="Application.workingWithDifferentDatatypes" />
         <item itemvalue="Application.FlightData" />
@@ -276,7 +294,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629561346942</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Chapter 7 , Dataframe level aggregations">
+      <created>1629565271622</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1629565271622</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,13 +323,18 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Spark Definitive guide Chapter 6 snippets. Working with different datatypes" />
     <MESSAGE value="Spark Definitive guide Chapter 6 snippets. Working with different datatypes completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Spark Definitive guide Chapter 6 snippets. Working with different datatypes completed" />
+    <MESSAGE value="Chapter 7 , Dataframe level aggregations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Chapter 7 , Dataframe level aggregations" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="413" y="123" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1629561022562">
+    <state x="309" y="47" key="#Inspections" timestamp="1629718371221">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="413" y="123" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1629561022562" />
+    <state x="309" y="47" key="#Inspections/0.0.1366.738@0.0.1366.738" timestamp="1629718371221" />
+    <state x="413" y="123" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1629785985103">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="413" y="123" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1629785985103" />
     <state x="137" y="0" width="1092" height="738" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1626692269121">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -313,22 +343,22 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="441" y="170" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.738@0.0.1366.738" timestamp="1626628325996" />
-    <state width="1323" height="354" key="GridCell.Tab.0.bottom" timestamp="1629565074498">
+    <state width="1323" height="354" key="GridCell.Tab.0.bottom" timestamp="1629795549139">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="354" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1629565074498" />
-    <state width="1323" height="354" key="GridCell.Tab.0.center" timestamp="1629565074497">
+    <state width="1323" height="354" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1629795549139" />
+    <state width="1323" height="354" key="GridCell.Tab.0.center" timestamp="1629795549139">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="354" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1629565074497" />
-    <state width="1323" height="354" key="GridCell.Tab.0.left" timestamp="1629565074497">
+    <state width="1323" height="354" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1629795549139" />
+    <state width="1323" height="354" key="GridCell.Tab.0.left" timestamp="1629795549139">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="354" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1629565074497" />
-    <state width="1323" height="354" key="GridCell.Tab.0.right" timestamp="1629565074497">
+    <state width="1323" height="354" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1629795549139" />
+    <state width="1323" height="354" key="GridCell.Tab.0.right" timestamp="1629795549139">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="354" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1629565074497" />
+    <state width="1323" height="354" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1629795549139" />
     <state width="1323" height="227" key="GridCell.Tab.1.bottom" timestamp="1626440982035">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -349,14 +379,18 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="163" y="0" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1629391823177" />
-    <state x="275" y="88" key="Vcs.Push.Dialog.v2" timestamp="1629561369354">
+    <state x="275" y="88" key="Vcs.Push.Dialog.v2" timestamp="1629565274907">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="275" y="88" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1629561369354" />
+    <state x="275" y="88" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1629565274907" />
     <state x="476" y="102" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1629561395265">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="476" y="102" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1366.738@0.0.1366.738" timestamp="1629561395265" />
+    <state x="500" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1629806294902">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="500" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.738@0.0.1366.738" timestamp="1629806294902" />
     <state x="339" y="165" key="run.anything.popup" timestamp="1629463333980">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -369,5 +403,16 @@
   <component name="WorksheetDefaultProjectSettings">
     <option name="compilerProfileName" value="Default" />
     <option name="moduleName" value="SampleSparkProject" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/src/main/scala/chapter7_Aggregations/aggregations.scala</url>
+          <line>11</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -22,11 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0f98c5b-24ed-4de8-8e84-ccd3f58be991" name="Default" comment="Chapter 7 , Dataframe level aggregations">
-      <change afterPath="$PROJECT_DIR$/src/main/scala/chapter8_Joins/Joins.scala" afterDir="false" />
+    <list default="true" id="c0f98c5b-24ed-4de8-8e84-ccd3f58be991" name="Default" comment="Chapter 8 - Aggregations">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/chapter7_Aggregations/aggregations.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/chapter7_Aggregations/aggregations.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/chapter8_Joins/Joins.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/chapter8_Joins/Joins.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -240,8 +238,8 @@
       <item itemvalue="Application.empDataProcess" />
       <item itemvalue="Application.workingWithDifferentDatatypes" />
       <item itemvalue="Application.aggregations" />
-      <item itemvalue="Maven.Run" />
       <item itemvalue="Application.Joins" />
+      <item itemvalue="Maven.Run" />
     </list>
     <recent_temporary>
       <list>
@@ -301,7 +299,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629565271622</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Chapter 8 - Aggregations">
+      <created>1629806349677</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1629806349677</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -324,7 +329,8 @@
     <MESSAGE value="Spark Definitive guide Chapter 6 snippets. Working with different datatypes" />
     <MESSAGE value="Spark Definitive guide Chapter 6 snippets. Working with different datatypes completed" />
     <MESSAGE value="Chapter 7 , Dataframe level aggregations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Chapter 7 , Dataframe level aggregations" />
+    <MESSAGE value="Chapter 8 - Aggregations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Chapter 8 - Aggregations" />
   </component>
   <component name="WindowStateProjectService">
     <state x="309" y="47" key="#Inspections" timestamp="1629718371221">
@@ -343,22 +349,22 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="441" y="170" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.738@0.0.1366.738" timestamp="1626628325996" />
-    <state width="1323" height="354" key="GridCell.Tab.0.bottom" timestamp="1629795549139">
+    <state width="1323" height="354" key="GridCell.Tab.0.bottom" timestamp="1629820765135">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="354" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1629795549139" />
-    <state width="1323" height="354" key="GridCell.Tab.0.center" timestamp="1629795549139">
+    <state width="1323" height="354" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1629820765135" />
+    <state width="1323" height="354" key="GridCell.Tab.0.center" timestamp="1629820765135">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="354" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1629795549139" />
-    <state width="1323" height="354" key="GridCell.Tab.0.left" timestamp="1629795549139">
+    <state width="1323" height="354" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1629820765135" />
+    <state width="1323" height="354" key="GridCell.Tab.0.left" timestamp="1629820765135">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="354" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1629795549139" />
-    <state width="1323" height="354" key="GridCell.Tab.0.right" timestamp="1629795549139">
+    <state width="1323" height="354" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1629820765135" />
+    <state width="1323" height="354" key="GridCell.Tab.0.right" timestamp="1629820765135">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="354" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1629795549139" />
+    <state width="1323" height="354" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1629820765135" />
     <state width="1323" height="227" key="GridCell.Tab.1.bottom" timestamp="1626440982035">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -379,18 +385,18 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="163" y="0" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1629391823177" />
-    <state x="275" y="88" key="Vcs.Push.Dialog.v2" timestamp="1629565274907">
+    <state x="275" y="88" key="Vcs.Push.Dialog.v2" timestamp="1629806368371">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="275" y="88" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1629565274907" />
+    <state x="275" y="88" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1629806368371" />
     <state x="476" y="102" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1629561395265">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="476" y="102" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1366.738@0.0.1366.738" timestamp="1629561395265" />
-    <state x="500" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1629806294902">
+    <state x="500" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1629806312630">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="500" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.738@0.0.1366.738" timestamp="1629806294902" />
+    <state x="500" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.738@0.0.1366.738" timestamp="1629806312630" />
     <state x="339" y="165" key="run.anything.popup" timestamp="1629463333980">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

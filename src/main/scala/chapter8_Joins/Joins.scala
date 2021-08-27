@@ -37,7 +37,7 @@ object Joins {
 
     var joinType = "inner"
     val joinDFCond = person.col("graduate_program") === graduateProgram.col("id")
-    /*person.join(graduateProgram,joinDFCond,joinType)
+    person.join(graduateProgram,joinDFCond,joinType)
       .show(false)
 
     /******************************************************************
@@ -82,7 +82,7 @@ object Joins {
     person.crossJoin(graduateProgram)
       .show()
 
-     */
+
 
     /******************************************************************
      * Join with complex type

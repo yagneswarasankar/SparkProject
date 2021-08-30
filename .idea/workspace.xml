@@ -22,14 +22,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0f98c5b-24ed-4de8-8e84-ccd3f58be991" name="Default" comment="Chapter 9 - Working with Various Datasources in spark">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_3_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_postgresql_postgresql_42_2_23.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_oracle_ojdbc6_11_2_0_3.xml" beforeDir="false" />
+    <list default="true" id="c0f98c5b-24ed-4de8-8e84-ccd3f58be991" name="Default" comment="Chapter 9 - Connecting to various RDBMSs from Spark">
+      <change afterPath="$PROJECT_DIR$/src/main/scala/chapter9_Datasource/OracleOperations.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SampleSparkProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SampleSparkProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/simple/empData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/empData.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/SparkProject/FlightData.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/SparkProject/FlightData.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/chapter6_WorkingWithDifferentTypes/workingWithDifferentDatatypes.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/chapter6_WorkingWithDifferentTypes/workingWithDifferentDatatypes.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/chapter7_Aggregations/aggregations.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/chapter7_Aggregations/aggregations.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/chapter9_Datasource/Datasources.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/chapter9_Datasource/Datasources.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/chapter9_Datasource/DifferentRDBMS.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/chapter9_Datasource/DifferentRDBMS.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +95,7 @@
       <recent name="C:\Learning\Scala\CricketData\src\main\resources\CricketData" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DifferentRDBMS">
+  <component name="RunManager" selected="Application.Datasources">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -156,6 +156,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="OracleOperations" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="chapter9_Datasource.OracleOperations" />
+      <module name="SampleSparkProject" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="chapter9_Datasource.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -169,20 +183,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="chapter7_Aggregations.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="workingWithDifferentDatatypes" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="chapter6_WorkingWithDifferentTypes.workingWithDifferentDatatypes" />
-      <module name="SampleSparkProject" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="chapter6_WorkingWithDifferentTypes.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -241,20 +241,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.workingWithDifferentDatatypes" />
       <item itemvalue="Application.aggregations" />
       <item itemvalue="Application.Joins" />
       <item itemvalue="Application.Datasources" />
       <item itemvalue="Application.DifferentRDBMS" />
+      <item itemvalue="Application.OracleOperations" />
       <item itemvalue="Maven.Run" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DifferentRDBMS" />
         <item itemvalue="Application.Datasources" />
+        <item itemvalue="Application.OracleOperations" />
+        <item itemvalue="Application.DifferentRDBMS" />
         <item itemvalue="Application.Joins" />
         <item itemvalue="Application.aggregations" />
-        <item itemvalue="Application.workingWithDifferentDatatypes" />
       </list>
     </recent_temporary>
   </component>
@@ -327,7 +327,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630081704575</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Chapter 9 - Connecting to various RDBMSs from Spark">
+      <created>1630169274771</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1630169274771</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -353,25 +360,26 @@
     <MESSAGE value="Chapter 8 - Aggregations" />
     <MESSAGE value="Chapter 9 - Joins" />
     <MESSAGE value="Chapter 9 - Working with Various Datasources in spark" />
-    <option name="LAST_COMMIT_MESSAGE" value="Chapter 9 - Working with Various Datasources in spark" />
+    <MESSAGE value="Chapter 9 - Connecting to various RDBMSs from Spark" />
+    <option name="LAST_COMMIT_MESSAGE" value="Chapter 9 - Connecting to various RDBMSs from Spark" />
   </component>
   <component name="WindowStateProjectService">
     <state x="309" y="47" key="#Inspections" timestamp="1629718371221">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="309" y="47" key="#Inspections/0.0.1366.738@0.0.1366.738" timestamp="1629718371221" />
-    <state x="413" y="123" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1630069077532">
+    <state x="413" y="123" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1630238054434">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="413" y="123" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1630069077532" />
+    <state x="413" y="123" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1366.738@0.0.1366.738" timestamp="1630238054434" />
     <state x="137" y="0" width="1092" height="738" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1626692269121">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="137" y="0" width="1092" height="738" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1626692269121" />
-    <state x="441" y="170" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1630062701335">
+    <state x="441" y="170" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1630319798761">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="441" y="170" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.738@0.0.1366.738" timestamp="1630062701335" />
+    <state x="441" y="170" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.738@0.0.1366.738" timestamp="1630319798761" />
     <state x="513" y="79" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1630075837702">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -380,22 +388,22 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="455" y="69" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1630168286623" />
-    <state width="1323" height="354" key="GridCell.Tab.0.bottom" timestamp="1630168490523">
+    <state width="1323" height="354" key="GridCell.Tab.0.bottom" timestamp="1630321744627">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="354" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1630168490523" />
-    <state width="1323" height="354" key="GridCell.Tab.0.center" timestamp="1630168490523">
+    <state width="1323" height="354" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1630321744627" />
+    <state width="1323" height="354" key="GridCell.Tab.0.center" timestamp="1630321744627">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="354" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1630168490523" />
-    <state width="1323" height="354" key="GridCell.Tab.0.left" timestamp="1630168490523">
+    <state width="1323" height="354" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1630321744627" />
+    <state width="1323" height="354" key="GridCell.Tab.0.left" timestamp="1630321744627">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="354" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1630168490523" />
-    <state width="1323" height="354" key="GridCell.Tab.0.right" timestamp="1630168490523">
+    <state width="1323" height="354" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1630321744627" />
+    <state width="1323" height="354" key="GridCell.Tab.0.right" timestamp="1630321744627">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="354" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1630168490523" />
+    <state width="1323" height="354" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1630321744627" />
     <state width="1323" height="227" key="GridCell.Tab.1.bottom" timestamp="1626440982035">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -416,10 +424,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="163" y="0" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1630168291883" />
-    <state x="275" y="88" key="Vcs.Push.Dialog.v2" timestamp="1630081710818">
+    <state x="275" y="88" key="Vcs.Push.Dialog.v2" timestamp="1630169278848">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="275" y="88" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1630081710818" />
+    <state x="275" y="88" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1630169278848" />
     <state x="476" y="102" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1629561395265">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -436,10 +444,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="339" y="165" key="run.anything.popup/0.0.1366.738@0.0.1366.738" timestamp="1630059142307" />
-    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1630077842632">
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1630234520536">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1630077842632" />
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738@0.0.1366.738" timestamp="1630234520536" />
   </component>
   <component name="WorksheetDefaultProjectSettings">
     <option name="compilerProfileName" value="Default" />

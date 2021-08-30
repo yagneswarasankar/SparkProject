@@ -1,7 +1,10 @@
 package chapter9_Datasource
 
+import java.util.Properties
+
 import org.apache.log4j.{Level, Logger}
 import org.apache.spark.sql.SparkSession
+import org.apache.spark.sql.functions.{col, max}
 
 object DifferentRDBMS {
 
@@ -20,7 +23,7 @@ object DifferentRDBMS {
      * sqlite
      **************************************************************************/
     val jdbcDriver  = "org.sqlite.JDBC"
-    val path1  = "src/main/resources/simple/flight-data/jdbc/my-sqlite.db"
+    val path1  = "sampleData/flight-data/jdbc/my-sqlite.db"
     val url = s"jdbc:sqlite:${path1}"
     val table_name = "flight_info"
 
@@ -49,7 +52,7 @@ object DifferentRDBMS {
       .option("dbtable",oracleTableName)
       .load()
 
-    //oracleDt.where(col("JOB") === "MA").explain()
+  /*  //oracleDt.where(col("JOB") === "MA").explain()
 
     /**************************************************************************
      *                                       postgres
@@ -98,8 +101,29 @@ object DifferentRDBMS {
       .option("password","girija")
       .load()
     mysqlDF.show()
+*/
 
+    /**********************************************************
+     * Sqlite is used for this.
+     */
 
+    val props = new Properties()
+    val sqliteUrl = "jdbc:sqlite:src/main/resources/sampleData/flight-data/jdbc/my-sqlite.db"
+    props.put("driver","org.sqlite.JDBC")
+
+    val predicateArray = Array(
+      "DEST_COUNTRY_NAME = 'Sweden' or ORIGIN_COUNTRY_NAME = 'Sweden'",
+      "DEST_COUNTRY_NAME = 'Anguilla' or ORIGIN_COUNTRY_NAME = 'Anguilla'"
+    )
+
+    val sqliteTable = "flight_info"
+
+    println(spark.read.jdbc(sqliteUrl,sqliteTable,predicateArray,props)
+      .rdd.getNumPartitions) //----------------2
+
+    val sqliteFlightData  = spark.read.jdbc(sqliteUrl,sqliteTable,predicateArray,props)
+
+    sqliteFlightData.agg(max(col("count"))).show()
 
 
   }

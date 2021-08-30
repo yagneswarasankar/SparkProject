@@ -42,7 +42,7 @@ object FlightData1 {
     /*Parquet Data*/
 
     val flightDataParquetDF = ss.read
-      .parquet("src/main/resources/simple/flight-data/parquet/2010-summary.parquet/").as[flightData]
+      .parquet("sampleData/flight-data/parquet/2010-summary.parquet/").as[flightData]
 
     val data = flightDataParquetDF
       .filter(flight_row => flight_row.ORIGIN_COUNTRY_NAME != "Canada")
@@ -51,7 +51,7 @@ object FlightData1 {
 
     /*CSV Data */
     val flightDataCSV = ss.read.option("inferSchema", value = true).option("header", value = true)
-      .csv("src/main/resources/simple/FlightData")
+      .csv("sampleData/FlightData")
 
     val groupedData = flightDataCSV.groupBy("DEST_COUNTRY_NAME")
       .sum("count")
@@ -63,7 +63,7 @@ object FlightData1 {
     /*retail Data*/
 
     val maxRetailCustomerPurchase = rtlData.getMaxPurchaseCustomer(rtlDF)
-    val retailDataStreamDF = rtlData.rtlDataStream(rtlDF,rtlDataSchema,"src/main/resources/simple/retail-data/by-day/*.csv")
+    val retailDataStreamDF = rtlData.rtlDataStream(rtlDF,rtlDataSchema, "sampleData/retail-data/by-day/*.csv")
     ///println(retailDataStreamDF.isStreaming).
     val purchaseBycustomerStream = retailDataStreamDF.selectExpr("CustomerID",
       "InvoiceDate",

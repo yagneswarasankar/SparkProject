@@ -20,7 +20,7 @@ object workingWithDifferentDatatypes {
 
     val rtlData = spark.read.option("header", "true")
       .option("inferSchema", "true")
-      .csv("src/main/resources/simple/retail-data/by-day/2010-12-01.csv")
+      .csv("sampleData/retail-data/by-day/2010-12-01.csv")
 
     rtlData.printSchema()
 

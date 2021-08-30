@@ -17,7 +17,7 @@ object aggregations {
       .getOrCreate()
 
     val rtlData = spark.read.format("csv").option("header","true").option("inferSchema","true")
-      .load("src/main/resources/simple/retail-data/all/*")
+      .load("sampleData/retail-data/all/*")
 /*
     /************************************************************************************
      *                                         Count

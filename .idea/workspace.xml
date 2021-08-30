@@ -22,15 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0f98c5b-24ed-4de8-8e84-ccd3f58be991" name="Default" comment="Chapter 9 - Connecting to various RDBMSs from Spark">
-      <change afterPath="$PROJECT_DIR$/src/main/scala/chapter9_Datasource/OracleOperations.scala" afterDir="false" />
+    <list default="true" id="c0f98c5b-24ed-4de8-8e84-ccd3f58be991" name="Default" comment="Chapter 9 - Writingn to various fileformats and RDBMSs using spark.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/simple/empData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sampleData/empData.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/SparkProject/FlightData.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/SparkProject/FlightData.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/chapter6_WorkingWithDifferentTypes/workingWithDifferentDatatypes.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/chapter6_WorkingWithDifferentTypes/workingWithDifferentDatatypes.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/chapter7_Aggregations/aggregations.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/chapter7_Aggregations/aggregations.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/chapter9_Datasource/Datasources.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/chapter9_Datasource/Datasources.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/chapter9_Datasource/DifferentRDBMS.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/chapter9_Datasource/DifferentRDBMS.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -334,7 +328,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630169274771</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Chapter 9 - Writingn to various fileformats and RDBMSs using spark.">
+      <created>1630322570287</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1630322570287</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -361,7 +362,8 @@
     <MESSAGE value="Chapter 9 - Joins" />
     <MESSAGE value="Chapter 9 - Working with Various Datasources in spark" />
     <MESSAGE value="Chapter 9 - Connecting to various RDBMSs from Spark" />
-    <option name="LAST_COMMIT_MESSAGE" value="Chapter 9 - Connecting to various RDBMSs from Spark" />
+    <MESSAGE value="Chapter 9 - Writingn to various fileformats and RDBMSs using spark." />
+    <option name="LAST_COMMIT_MESSAGE" value="Chapter 9 - Writingn to various fileformats and RDBMSs using spark." />
   </component>
   <component name="WindowStateProjectService">
     <state x="309" y="47" key="#Inspections" timestamp="1629718371221">
@@ -388,22 +390,22 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="455" y="69" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1630168286623" />
-    <state width="1323" height="354" key="GridCell.Tab.0.bottom" timestamp="1630321744627">
+    <state width="1323" height="354" key="GridCell.Tab.0.bottom" timestamp="1630326821243">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="354" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1630321744627" />
-    <state width="1323" height="354" key="GridCell.Tab.0.center" timestamp="1630321744627">
+    <state width="1323" height="354" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1630326821243" />
+    <state width="1323" height="354" key="GridCell.Tab.0.center" timestamp="1630326821227">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="354" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1630321744627" />
-    <state width="1323" height="354" key="GridCell.Tab.0.left" timestamp="1630321744627">
+    <state width="1323" height="354" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1630326821227" />
+    <state width="1323" height="354" key="GridCell.Tab.0.left" timestamp="1630326821227">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="354" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1630321744627" />
-    <state width="1323" height="354" key="GridCell.Tab.0.right" timestamp="1630321744627">
+    <state width="1323" height="354" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1630326821227" />
+    <state width="1323" height="354" key="GridCell.Tab.0.right" timestamp="1630326821227">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="1323" height="354" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1630321744627" />
+    <state width="1323" height="354" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1630326821227" />
     <state width="1323" height="227" key="GridCell.Tab.1.bottom" timestamp="1626440982035">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -424,10 +426,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="163" y="0" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1630168291883" />
-    <state x="275" y="88" key="Vcs.Push.Dialog.v2" timestamp="1630169278848">
+    <state x="275" y="88" key="Vcs.Push.Dialog.v2" timestamp="1630322577598">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="275" y="88" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1630169278848" />
+    <state x="275" y="88" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1630322577598" />
     <state x="476" y="102" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1629561395265">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

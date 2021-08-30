@@ -4,6 +4,7 @@ import org.apache.log4j.{Level, Logger}
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.functions.{col,split}
 import org.apache.spark.sql.types.{IntegerType, StringType, StructField, StructType}
+//import org.apache.spark.sql.types.{IntegerType, StringType, StructField, StructType}
 
 object Datasources {
 
@@ -14,7 +15,8 @@ object Datasources {
     Logger.getLogger("org").setLevel(Level.ERROR)
 
 
-    val spark: SparkSession = SparkSession.builder().master("local").getOrCreate()
+    val spark: SparkSession = SparkSession.builder().master("local")
+      .getOrCreate()
 
     /**********************************************************************************
      *                                          CSV format
@@ -38,8 +40,8 @@ object Datasources {
       .option("header","true")
       .option("columnNameOfCorruptRecord","_currupt_record")
       .option("mode","PERMISSIVE")
-      .schema(schema)
-      .load("sampleData/flight-data/csv/2010-summary.csv")
+      //.schema(schema)
+      .load("src/main/resources/sampleData/flight-data/csv/2010-summary.csv")
 
       flightData.show(5,truncate = false)
 
@@ -180,6 +182,32 @@ object Datasources {
       .mode("overwrite")
       .format("csv")
       .save("src/main/resources/csv/partitioned-csv-files")
+
+
+    flightData.write
+      .partitionBy("DEST_COUNTRY_NAME")
+      .mode("overwrite")
+      .save("src/main/resources/partitioned/partitioned-files.parquet")
+
+    spark.read.format("parquet")
+      .load("src/main/resources/partitioned/partitioned-files.parquet/DEST_COUNTRY_NAME=Afghanistan/")
+      .show()
+
+
+    spark.read.format("parquet")
+      .load("spark-warehouse/buckettable/part-00000-9017d257-d9e1-4fda-8bdb-7c484b783c5f_00000.c000.snappy.parquet")
+      .show()
+
+    /****************************************
+     * Not working as it is spark managed table
+     */
+    /*flightData.write
+      .bucketBy(10,"count")
+      .mode("overwrite")
+      .saveAsTable("bucketTable")
+
+    spark.sql("select * from buckettable ").show()*/
+
 
   }
 

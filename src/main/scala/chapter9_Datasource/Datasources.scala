@@ -2,8 +2,6 @@ package chapter9_Datasource
 
 import org.apache.log4j.{Level, Logger}
 import org.apache.spark.sql.SparkSession
-import org.apache.spark.sql.functions.{col,split}
-import org.apache.spark.sql.types.{IntegerType, StringType, StructField, StructType}
 //import org.apache.spark.sql.types.{IntegerType, StringType, StructField, StructType}
 
 object Datasources {
@@ -22,6 +20,7 @@ object Datasources {
      *                                          CSV format
      **********************************************************************************/
 
+/*
     val schema1 =   StructType{
       Array(
           StructField("ORIGIN_COUNTRY_NAME",StringType, nullable = true),
@@ -197,6 +196,7 @@ object Datasources {
     spark.read.format("parquet")
       .load("spark-warehouse/buckettable/part-00000-9017d257-d9e1-4fda-8bdb-7c484b783c5f_00000.c000.snappy.parquet")
       .show()
+*/
 
     /****************************************
      * Not working as it is spark managed table
@@ -207,6 +207,23 @@ object Datasources {
       .saveAsTable("bucketTable")
 
     spark.sql("select * from buckettable ").show()*/
+
+ */
+
+    /******************************************************************
+     *                               Avro
+     ******************************************************************/
+
+    //Note: The Avro jar version should be compliat with the Scala version.
+    //My scala version is 2.11.8 so the avro jar I fetched is : spark-avro_2.11-2.4.4.jar.
+    //If You are using 2.12* scala versino it has to be spark-avro_2.12-2.4.4.jar.
+
+    spark.read.format("avro")
+    .load("src/main/resources/sampleData/Avro/episodes.avro")
+    .show()
+
+
+
 
 
   }
